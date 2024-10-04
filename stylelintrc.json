@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
+  "rules": {
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "font-family-no-missing-generic-family-keyword": null,
+    "media-feature-range-notation": null,
+    "declaration-no-important": true,
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates"]
+      }
+    ]
+  }
+}

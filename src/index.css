@@ -1,0 +1,35 @@
+/**
+ * Global index stylesheet.
+ *
+ * @file index.css
+ * @description Global index stylesheet.
+ */
+
+:root {
+  --primary-accent: #a0d683;
+  --light-accent: #d3ee98;
+  --lighter-accent: #feff9f;
+  --dark-accent: #e5e4e2;
+  --darker-accent: #f7f7f7;
+  --darkest-accent: #d6d6d6;
+  --safe-light-accent: #dcfce7;
+  --safe-accent: #bbf7d0;
+  --safe-accent-hover: #4ade80;
+  --danger-accent: #fecaca;
+  --danger-accent-hover: #f87171;
+  --warning-accent: #fef3c7;
+  --warning-accent-hover: #fde68a;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--safe-accent);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

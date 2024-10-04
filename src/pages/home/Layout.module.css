@@ -1,0 +1,15 @@
+/**
+ * Styles for Layout UI Component.
+ *
+ * @file Layout.module.css
+ * @description Styles for Layout UI Component.
+ */
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}

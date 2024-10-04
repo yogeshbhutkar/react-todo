@@ -1,0 +1,23 @@
+/**
+ * Styles for Displaying the Tasks UI Component.
+ *
+ * @file DisplayTasks.module.css
+ * @description Styles for Displaying the Tasks UI Component.
+ */
+
+.display-tasks {
+    max-height: 65vh;
+    overflow: hidden scroll;
+}
+
+.nothing-found {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 980px) {
+    .display-tasks {
+        max-height: 75vh;
+    }
+}

@@ -1,0 +1,15 @@
+/**
+ * Styles for Button UI Component.
+ *
+ * @file Button.module.css
+ * @description Styles for Button UI Component.
+ */
+
+.generic-button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
