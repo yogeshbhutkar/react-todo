@@ -31,7 +31,25 @@ import Button from './Button';
  */
 export default function Dialog( { setIsDialogOpen, placeholder, updateTaskCB, task } ) {
     
-    const [ updatedTask, setUpdatedTask ] = useState( '' );
+    const [ updatedTask, setUpdatedTask ] = useState( placeholder );
+    const [ errorState, setErrorState ] = useState( '' );
+
+    /**
+     * Handle the task update.
+     * 
+     * @return { void }
+     */
+    const handleTaskUpdate = () => {
+
+        // Check if the task is empty.
+        if ( 0 === updatedTask.length ) {
+            setErrorState( 'Task cannot be empty' );
+            return;
+        }
+
+        updateTaskCB( { ...task, task: updatedTask } );
+        setIsDialogOpen( false );
+    }
 
     return (
         <>
@@ -40,25 +58,20 @@ export default function Dialog( { setIsDialogOpen, placeholder, updateTaskCB, ta
                 <div className={ styles['dialog'] }>
                     <div className={ styles['dialog-header'] }>
                         <h4 className={ styles['dialog-heading'] }>Update Task</h4>
+                        { errorState && <p className={ styles['error-message'] }>{ errorState }</p> }
                     </div>
                     <div className={ styles['dialog-content'] }>
                         <Input
                             type="text"
-                            placeholder={ placeholder }
                             className={ styles['dialog-input'] }
                             value={ updatedTask }
                             onChange={ ( e ) => setUpdatedTask( e.target.value ) }
-                            onPressingEnter={ () => {
-                                updateTaskCB( { ...task, task: updatedTask } );
-                                setIsDialogOpen( false );
-                            } }
+                            autoFocus={ true }
+                            onPressingEnter={ handleTaskUpdate }
                         />
                         <Button
                             className={ styles['update-button'] }
-                            onClick={ () => {
-                                updateTaskCB( { ...task, task: updatedTask } );
-                                setIsDialogOpen( false );
-                            } }>
+                            onClick={ handleTaskUpdate }>
                             Update
                         </Button>
                     </div>

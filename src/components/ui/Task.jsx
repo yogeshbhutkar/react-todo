@@ -50,15 +50,18 @@ export default function Task( { task, taskCallbacks } ) {
                 <Button
                     className={ styles['task-button-complete'] }
                     onClick={ () => markTaskCompleteCB( task.id ) }
-                    ariaLabel="Mark as complete"></Button>
+                    ariaLabel="Mark as complete"
+                ></Button>
                 <Button
                     className={ styles['task-button-edit'] }
                     onClick={ () => setIsDialogOpen( true ) }
-                    ariaLabel="Edit Task"></Button>
+                    ariaLabel="Edit Task"
+                ></Button>
                 <Button
                     className={ styles['task-button-delete'] }
                     onClick={ () => deleteTaskCB( task.id ) }
-                    ariaLabel="Delete Task"></Button>
+                    ariaLabel="Delete Task"
+                ></Button>
             </div>
         </div>
     );

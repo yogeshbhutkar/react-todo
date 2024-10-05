@@ -36,6 +36,7 @@ export default function Home() {
     // State for the tasks.
     const [ tasks, setTasks ] = useState( [] );
 
+    // Get the tasks from local storage.
     useEffect( () => {
         // Get the tasks from local storage.
         const userTasks = JSON.parse( localStorage.getItem( 'userTasks' ) );

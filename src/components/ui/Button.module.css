@@ -13,3 +13,9 @@
 	display: inline-flex;
 	align-items: center;
 }
+
+.generic-button:disabled {
+    background-color: #ccc; /* Example: grey background */
+    cursor: not-allowed;    /* Example: not-allowed cursor */
+    opacity: 0.6;           /* Example: reduced opacity */
+}

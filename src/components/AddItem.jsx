@@ -28,13 +28,27 @@ import Input from './ui/Input';
 export default function AddItem( { addTaskCB } ) {
     const [ task, setTask ] = useState( '' );
 
+    /**
+     * Handle the form submission.
+     * 
+     * @param { Object } e The event object.
+     * 
+     * @return { void }
+     */
+    const handleFormSubmission = ( e ) => {
+        e.preventDefault();
+        addTaskCB( task );
+        setTask( '' );
+    }
+
     return (
-        <div className={ styles['add-item'] }>
+        <form onClick={ handleFormSubmission } className={ styles['add-item'] }>
             <Input
                 className={ styles['add-input'] }
                 placeholder="Add new tasks in your list"
                 value={ task }
                 onChange={ ( e ) => setTask( e.target.value ) }
+                autoFocus={ true }
                 onPressingEnter={ () => {
                     addTaskCB( task );
                     setTask( '' );
@@ -43,11 +57,9 @@ export default function AddItem( { addTaskCB } ) {
             <Button
                 className={ styles['add-button'] }
                 ariaLabel="Add Task"
-                onClick={ () => {
-                    addTaskCB( task );
-                    setTask( '' );
-                } }
-            />
-        </div>
+                type="submit"
+                disabled={ task.length > 0 ? false : true }
+            ></Button>
+        </form>
     );
 }

@@ -74,3 +74,12 @@
     background-color: var(--primary-accent);
     color: #fff;
 }
+
+.error-message {
+    color: var(--danger-accent-hover);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}

@@ -25,10 +25,11 @@ import React from 'react';
  * @param { string } props.value The value of the input.
  * @param { Function } props.onChange The function to call when the input changes.
  * @param { Function } props.onPressingEnter The function to call when the Enter key is pressed.
+ * @param { boolean } props.autoFocus The autofocus state of the input.
  *
  * @return { JSX.Element } The UI component for input.
  */
-export default function Input( { type, placeholder, className, value, onChange, onPressingEnter } ) {
+export default function Input( { type, placeholder, className, value, onChange, onPressingEnter, autoFocus = false } ) {
     return (
         <input
             className={ className }
@@ -36,8 +37,9 @@ export default function Input( { type, placeholder, className, value, onChange, 
             placeholder={ placeholder ? placeholder : '' }
             value={ value }
             onChange={ onChange }
+            autoFocus={ autoFocus }
             onKeyDown={ ( e ) => {
-                if ( e.key === 'Enter' ) {
+                if ( 'Enter' === e.key ) {
                     e.preventDefault();
                     onPressingEnter();
                 }
