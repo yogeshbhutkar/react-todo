@@ -53,24 +53,24 @@ export default function Dialog( { setIsDialogOpen, placeholder, updateTaskCB, ta
 
     return (
         <>
-            <div className={ styles['parent-container'] } onClick={ () => setIsDialogOpen( false ) } />
-            <div className={ styles['center-dialog'] }>
-                <div className={ styles['dialog'] }>
-                    <div className={ styles['dialog-header'] }>
-                        <h4 className={ styles['dialog-heading'] }>Update Task</h4>
-                        { errorState && <p className={ styles['error-message'] }>{ errorState }</p> }
+            <div className={ styles[ 'parent-container' ] } onClick={ () => setIsDialogOpen( false ) } />
+            <div className={ styles[ 'center-dialog' ] }>
+                <div className={ styles[ 'dialog' ] }>
+                    <div className={ styles[ 'dialog-header' ] }>
+                        <h4 className={ styles[ 'dialog-heading' ] }>Update Task</h4>
+                        { errorState && <p className={ styles[ 'error-message' ] }>{ errorState }</p> }
                     </div>
-                    <div className={ styles['dialog-content'] }>
+                    <div className={ styles[ 'dialog-content' ] }>
                         <Input
                             type="text"
-                            className={ styles['dialog-input'] }
+                            className={ styles[ 'dialog-input' ] }
                             value={ updatedTask }
                             onChange={ ( e ) => setUpdatedTask( e.target.value ) }
                             autoFocus={ true }
                             onPressingEnter={ handleTaskUpdate }
                         />
                         <Button
-                            className={ styles['update-button'] }
+                            className={ styles[ 'update-button' ] }
                             onClick={ handleTaskUpdate }>
                             Update
                         </Button>

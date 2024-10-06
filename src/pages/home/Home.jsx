@@ -101,8 +101,8 @@ export default function Home() {
     return (
         <TasksContext.Provider value={ tasks }>
             <Layout>
-                <section className={ styles['hero-section'] }>
-                    <h1 className={ styles['hero-text'] }>ToDo App</h1>
+                <section className={ styles[ 'hero-section' ] }>
+                    <h1 className={ styles[ 'hero-text' ] }>ToDo App</h1>
                     <DisplayTasks taskCallbacks={ taskCallbacks } />
                     <AddItem addTaskCB={ addItemToTasks } />
                 </section>

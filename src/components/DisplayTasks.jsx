@@ -30,12 +30,12 @@ export default function DisplayTasks( { taskCallbacks } ) {
     const tasks = useTasks();
 
     return tasks && tasks.length > 0 ? (
-        <div className={ styles['display-tasks'] }>
+        <div className={ styles[ 'display-tasks' ] }>
             { tasks.map( ( task, index ) => {
                 return <Task task={ task } key={ index } taskCallbacks={ taskCallbacks } />;
             } ) }
         </div>
     ) : (
-        <p className={ styles['nothing-found'] }>No tasks to display</p>
+        <p className={ styles[ 'nothing-found' ] }>No tasks to display</p>
     );
 }

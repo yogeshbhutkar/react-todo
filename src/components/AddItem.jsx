@@ -42,9 +42,9 @@ export default function AddItem( { addTaskCB } ) {
     }
 
     return (
-        <form onClick={ handleFormSubmission } className={ styles['add-item'] }>
+        <form onClick={ handleFormSubmission } className={ styles[ 'add-item' ] }>
             <Input
-                className={ styles['add-input'] }
+                className={ styles[ 'add-input' ] }
                 placeholder="Add new tasks in your list"
                 value={ task }
                 onChange={ ( e ) => setTask( e.target.value ) }
@@ -55,7 +55,7 @@ export default function AddItem( { addTaskCB } ) {
                 } }
             />
             <Button
-                className={ styles['add-button'] }
+                className={ styles[ 'add-button' ] }
                 ariaLabel="Add Task"
                 type="submit"
                 disabled={ task.length > 0 ? false : true }

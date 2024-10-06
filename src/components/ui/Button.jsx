@@ -31,7 +31,7 @@ import styles from './Button.module.css';
 export default function Button( { className, children, onClick, ariaLabel, type = 'button', disabled = false } ) {
     return (
         <button
-            className={ `${ className } ${ styles['generic-button'] }` }
+            className={ `${ className } ${ styles[ 'generic-button' ] }` }
             onClick={ onClick }
             aria-label={ ariaLabel }
             type={ type }
