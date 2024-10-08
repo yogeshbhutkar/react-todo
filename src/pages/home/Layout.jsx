@@ -26,5 +26,5 @@ import styles from './Layout.module.css';
  * @return { JSX.Element } The layout component for the application.
  */
 export default function Layout( { children } ) {
-    return <main className={ styles[ 'layout-container' ] }>{ children }</main>;
+	return <main className={ styles[ 'layout-container' ] }>{ children }</main>;
 }

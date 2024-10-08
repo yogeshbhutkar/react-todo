@@ -6,8 +6,8 @@
  * @module App
  */
 
-import { useContext } from "react"
-import { TasksContext } from "../context/context"
+import { useContext } from 'react';
+import { TasksContext } from '../context/context';
 
 /**
  * Custom hook to use the tasks context.
@@ -15,15 +15,15 @@ import { TasksContext } from "../context/context"
  * @return { Object } The tasks context.
  */
 export const useTasks = () => {
+	
+	// Get the tasks context.
+	const tasks = useContext( TasksContext );
 
-    // Get the tasks context.
-    const tasks = useContext( TasksContext );
+	// If the tasks context is undefined, throw an error.
+	if ( undefined === tasks ) {
+		throw new Error( 'useTasks must be used within a TasksProvider' );
+	}
 
-    // If the tasks context is undefined, throw an error.
-    if ( undefined === tasks ) {
-        throw new Error( 'useTasks must be used within a TasksProvider' );
-    }
-
-    // Return the tasks context.
-    return tasks;
-}
+	// Return the tasks context.
+	return tasks;
+};

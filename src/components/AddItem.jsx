@@ -26,40 +26,42 @@ import Input from './ui/Input';
  * @return { JSX.Element } The component for adding an item to the todo list.
  */
 export default function AddItem( { addTaskCB } ) {
-    const [ task, setTask ] = useState( '' );
+	const [ task, setTask ] = useState( '' );
 
-    /**
-     * Handle the form submission.
-     * 
-     * @param { Object } e The event object.
-     * 
-     * @return { void }
-     */
-    const handleFormSubmission = ( e ) => {
-        e.preventDefault();
-        addTaskCB( task );
-        setTask( '' );
-    }
+	/**
+	 * Handle the form submission.
+	 *
+	 * @param { Object } event The event object.
+	 *
+	 * @return { void }
+	 */
+	const handleFormSubmission = ( event ) => {
 
-    return (
-        <form onClick={ handleFormSubmission } className={ styles[ 'add-item' ] }>
-            <Input
-                className={ styles[ 'add-input' ] }
-                placeholder="Add new tasks in your list"
-                value={ task }
-                onChange={ ( e ) => setTask( e.target.value ) }
-                autoFocus={ true }
-                onPressingEnter={ () => {
-                    addTaskCB( task );
-                    setTask( '' );
-                } }
-            />
-            <Button
-                className={ styles[ 'add-button' ] }
-                ariaLabel="Add Task"
-                type="submit"
-                disabled={ task.length > 0 ? false : true }
-            ></Button>
-        </form>
-    );
+		event.preventDefault();
+		addTaskCB( task );
+		setTask( '' );
+	};
+
+	return (
+		<form onClick={ handleFormSubmission } className={ styles[ 'add-item' ] }>
+			{/* Type is implicitly defined to be text. */}
+			<Input
+				className={ styles[ 'add-input' ] }
+				placeholder="Add new tasks in your list"
+				value={ task }
+				onChange={ ( event ) => setTask( event.target.value ) }
+				autoFocus={ true }
+				onPressingEnter={ () => {
+					addTaskCB( task );
+					setTask( '' );
+				} }
+			/>
+			<Button
+				className={ styles[ 'add-button' ] }
+				ariaLabel="Add Task"
+				type="submit"
+				disabled={ task.length > 0 ? false : true }
+			></Button>
+		</form>
+	);
 }

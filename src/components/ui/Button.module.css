@@ -6,16 +6,16 @@
  */
 
 .generic-button {
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    cursor: pointer;
+	border: none;
+	border-radius: 8px;
+	padding: 8px 16px;
+	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
 }
 
 .generic-button:disabled {
-    background-color: #ccc; /* Example: grey background */
-    cursor: not-allowed;    /* Example: not-allowed cursor */
-    opacity: 0.6;           /* Example: reduced opacity */
+	background-color: var(--disabled-accent);
+	cursor: not-allowed; /* Cursor is not allowed. */
+	opacity: 0.6; /* Reduce the opacity to 0.6 */
 }

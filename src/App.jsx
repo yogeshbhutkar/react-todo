@@ -22,9 +22,9 @@ import Home from './pages/home/Home';
  * @return { JSX.Element } The main component of the application.
  */
 export default function App() {
-    return (
-        <>
-            <Home />
-        </>
-    );
+	return (
+		<>
+			<Home />
+		</>
+	);
 }

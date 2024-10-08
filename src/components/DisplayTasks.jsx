@@ -27,15 +27,15 @@ import styles from './DisplayTasks.module.css';
  * @return { JSX.Element } The component for displaying tasks.
  */
 export default function DisplayTasks( { taskCallbacks } ) {
-    const tasks = useTasks();
+	const tasks = useTasks();
 
-    return tasks && tasks.length > 0 ? (
-        <div className={ styles[ 'display-tasks' ] }>
-            { tasks.map( ( task, index ) => {
-                return <Task task={ task } key={ index } taskCallbacks={ taskCallbacks } />;
-            } ) }
-        </div>
-    ) : (
-        <p className={ styles[ 'nothing-found' ] }>No tasks to display</p>
-    );
+	return tasks && tasks.length > 0 ? (
+		<div className={ styles[ 'display-tasks' ] }>
+			{ tasks.map( ( task, index ) => {
+				return <Task task={ task } key={ index } taskCallbacks={ taskCallbacks } />;
+			} ) }
+		</div>
+	) : (
+		<p className={ styles[ 'nothing-found' ] }>No tasks to display</p>
+	);
 }

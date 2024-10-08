@@ -10,7 +10,7 @@ import { createContext } from 'react';
 
 /**
  * Context for the tasks.
- * 
+ *
  * @type { Object }
  */
 export const TasksContext = createContext( undefined );

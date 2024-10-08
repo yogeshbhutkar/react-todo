@@ -6,77 +6,77 @@
  */
 
 .task-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 5px 0 var(--dark-accent);
-    border-radius: 5px;
-    margin: 16px;
-    padding: 16px 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 5px 0 var(--dark-accent);
+	border-radius: 5px;
+	margin: 16px;
+	padding: 16px 8px;
 }
 
 .task-container-completed {
-    background-color: var(--safe-light-accent);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 5px 0 var(--dark-accent);
-    border-radius: 5px;
-    margin: 16px;
-    padding: 16px 8px;
+	background-color: var(--safe-light-accent);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 5px 0 var(--dark-accent);
+	border-radius: 5px;
+	margin: 16px;
+	padding: 16px 8px;
 }
 
 .task-container-completed:hover {
-    cursor: pointer;
-    background-color: var(--safe-accent)
+	cursor: pointer;
+	background-color: var(--safe-accent);
 }
 
 .task-container:hover {
-    cursor: pointer;
-    background-color: var(--darker-accent)
+	cursor: pointer;
+	background-color: var(--darker-accent);
 }
 
 .task-completed {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .task-heading {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 8px 8px 2px;
+	font-size: 1rem;
+	font-weight: 500;
+	margin: 8px 8px 2px;
 }
 
 .icons-group {
-    display: flex;
-    column-gap: 4px;
+	display: flex;
+	column-gap: 4px;
 }
 
 .task-button-complete {
-    background-color: var(--safe-accent);
+	background-color: var(--safe-accent);
 }
 
 .task-button-complete:hover {
-    background-color: var(--safe-accent-hover);
+	background-color: var(--safe-accent-hover);
 }
 
 .task-button-edit {
-    background-color: var(--warning-accent);
+	background-color: var(--warning-accent);
 }
 
 .task-button-edit:hover {
-    background-color: var(--warning-accent-hover);
+	background-color: var(--warning-accent-hover);
 }
 
 .task-button-delete {
-    background-color: var(--danger-accent);
+	background-color: var(--danger-accent);
 }
 
 .task-button-delete:hover {
-    background-color: var(--danger-accent-hover);
+	background-color: var(--danger-accent-hover);
 }
 
 .task-button-complete::after {
-    content: "";
+	content: '';
 	display: flex;
 	width: 16px;
 	height: 16px;
@@ -87,29 +87,29 @@
 }
 
 .task-button-edit::after {
-    content: "";
-    display: flex;
-    width: 16px;
-    height: 16px;
-    background-image: url('../../../public/icons/edit.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+	content: '';
+	display: flex;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../../public/icons/edit.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
 .task-button-delete::after {
-    content: "";
-    display: flex;
-    width: 16px;
-    height: 16px;
-    background-image: url('../../../public/icons/delete.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+	content: '';
+	display: flex;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../../public/icons/delete.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
 }
 
 .task-date {
-    font-size: 0.75rem;
-    margin-top: 0;
-    margin-left: 8px;
+	font-size: 0.75rem;
+	margin-top: 0;
+	margin-left: 8px;
 }

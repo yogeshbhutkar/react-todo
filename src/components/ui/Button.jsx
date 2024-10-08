@@ -28,16 +28,23 @@ import styles from './Button.module.css';
  *
  * @return { JSX.Element } The UI component for button.
  */
-export default function Button( { className, children, onClick, ariaLabel, type = 'button', disabled = false } ) {
-    return (
-        <button
-            className={ `${ className } ${ styles[ 'generic-button' ] }` }
-            onClick={ onClick }
-            aria-label={ ariaLabel }
-            type={ type }
-            disabled={ disabled }
-        >
-            { children }
-        </button>
-    );
+export default function Button( {
+	className,
+	children,
+	onClick,
+	ariaLabel,
+	type = 'button',
+	disabled = false
+} ) {
+	return (
+		<button
+			className={ `${ className } ${ styles[ 'generic-button' ] }` }
+			onClick={ onClick }
+			aria-label={ ariaLabel }
+			type={ type }
+			disabled={ disabled }
+		>
+			{ children }
+		</button>
+	);
 }

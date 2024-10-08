@@ -29,21 +29,29 @@ import React from 'react';
  *
  * @return { JSX.Element } The UI component for input.
  */
-export default function Input( { type, placeholder, className, value, onChange, onPressingEnter, autoFocus = false } ) {
-    return (
-        <input
-            className={ className }
-            type={ type ? type : 'text' }
-            placeholder={ placeholder ? placeholder : '' }
-            value={ value }
-            onChange={ onChange }
-            autoFocus={ autoFocus }
-            onKeyDown={ ( e ) => {
-                if ( 'Enter' === e.key ) {
-                    e.preventDefault();
-                    onPressingEnter();
-                }
-            } }
-        />
-    );
+export default function Input( {
+	type,
+	placeholder,
+	className,
+	value,
+	onChange,
+	onPressingEnter,
+	autoFocus = false
+} ) {
+	return (
+		<input
+			className={ className }
+			type={ type ? type : 'text' }
+			placeholder={ placeholder ? placeholder : '' }
+			value={ value }
+			onChange={ onChange }
+			autoFocus={ autoFocus }
+			onKeyDown={ ( event ) => {
+				if ( 'Enter' === event.key ) {
+					event.preventDefault();
+					onPressingEnter();
+				}
+			} }
+		/>
+	);
 }
