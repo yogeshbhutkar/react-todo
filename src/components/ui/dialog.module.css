@@ -62,11 +62,13 @@
 	border-radius: 8px;
 	padding: 16px;
 	margin: 8px;
+	font-size: 1rem;
 }
 
 .update-button {
 	margin: 8px;
 	padding: 16px;
+	font-size: 1rem;
 	background-color: var(--light-accent);
 }
 
