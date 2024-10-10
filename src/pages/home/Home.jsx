@@ -1,16 +1,16 @@
 /**
  * Home component.
  *
- * @file Home.jsx
+ * @file home.jsx
  * @description The home component for the application.
  * @module App
  */
 
 import React, { useCallback, useEffect, useState } from 'react';
-import Layout from './Layout';
-import styles from './Home.module.css';
-import AddItem from '../../components/AddItem';
-import DisplayTasks from '../../components/DisplayTasks';
+import Layout from './layout';
+import styles from './home.module.css';
+import AddItem from '../../components/add-item';
+import DisplayTasks from '../../components/display-tasks';
 import {
 	addItemsToTasks,
 	removeItemFromTasks,
@@ -64,7 +64,7 @@ export default function Home() {
 	/**
 	 * Delete a task from the tasks.
 	 *
-	 * @param { string } task The task to delete.
+	 * @param { string } task The task id to delete.
 	 *
 	 * @return { void }
 	 */
@@ -78,7 +78,7 @@ export default function Home() {
 	/**
 	 * Mark a task as complete.
 	 *
-	 * @param { string } task The task to mark as complete.
+	 * @param { string } task The task id to mark as complete.
 	 *
 	 * @return { void }
 	 */

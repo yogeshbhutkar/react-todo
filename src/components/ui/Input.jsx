@@ -1,7 +1,7 @@
 /**
  * Input UI component.
  *
- * @file Input.jsx
+ * @file input.jsx
  * @description The UI component for input.
  * @module App
  */
@@ -30,7 +30,7 @@ import React from 'react';
  * @return { JSX.Element } The UI component for input.
  */
 export default function Input( {
-	type,
+	type = 'text',
 	placeholder,
 	className,
 	value,
@@ -41,7 +41,7 @@ export default function Input( {
 	return (
 		<input
 			className={ className }
-			type={ type ? type : 'text' }
+			type={ type }
 			placeholder={ placeholder ? placeholder : '' }
 			value={ value }
 			onChange={ onChange }

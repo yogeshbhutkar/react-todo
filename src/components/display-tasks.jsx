@@ -1,15 +1,15 @@
 /**
  * DisplayTasks component.
  *
- * @file DisplayTasks.jsx
+ * @file display-tasks.jsx
  * @description The component for displaying tasks.
  * @module App
  */
 
 import React from 'react';
-import Task from './ui/Task';
 import { useTasks } from '../hooks/useTasks';
-import styles from './DisplayTasks.module.css';
+import Task from './ui/task';
+import styles from './display-tasks.module.css';
 
 /**
  * DisplayTasks -- The component for displaying tasks.

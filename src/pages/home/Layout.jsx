@@ -1,13 +1,13 @@
 /**
  * Layout component.
  *
- * @file Layout.jsx
+ * @file layout.jsx
  * @description The layout component for the application.
  * @module App
  */
 
 import React from 'react';
-import styles from './Layout.module.css';
+import styles from './layout.module.css';
 
 /**
  * Layout -- The layout component for the application.

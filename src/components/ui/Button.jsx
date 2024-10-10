@@ -1,13 +1,13 @@
 /**
  * Button UI component.
  *
- * @file Button.jsx
+ * @file button.jsx
  * @description The UI component for button.
  * @module App
  */
 
 import React from 'react';
-import styles from './Button.module.css';
+import styles from './button.module.css';
 
 /**
  * Button -- The UI component for button.
@@ -20,7 +20,7 @@ import styles from './Button.module.css';
  * )
  * @param { Object } props The properties of the component.
  * @param { string } props.className The class name of the button.
- * @param { string } props.text The text of the button.
+ * @param { string } props.children The child components to render.
  * @param { Function } props.onClick The function to call when the button is clicked.
  * @param { string } props.ariaLabel The aria label of the button
  * @param { string } props.type The type of the button.
@@ -32,7 +32,6 @@ export default function Button( {
 	className,
 	children,
 	onClick,
-	ariaLabel,
 	type = 'button',
 	disabled = false
 } ) {
@@ -40,7 +39,6 @@ export default function Button( {
 		<button
 			className={ `${ className } ${ styles[ 'generic-button' ] }` }
 			onClick={ onClick }
-			aria-label={ ariaLabel }
 			type={ type }
 			disabled={ disabled }
 		>

@@ -1,15 +1,15 @@
 /**
  * AddItem component.
  *
- * @file AddItem.jsx
+ * @file add-item.jsx
  * @description The component for adding an item to the todo list.
  * @module App
  */
 
 import React, { useState } from 'react';
-import styles from './AddItem.module.css';
-import Button from './ui/Button';
-import Input from './ui/Input';
+import styles from './add-item.module.css';
+import Button from './ui/button';
+import Input from './ui/input';
 
 /**
  * AddItem -- The component for adding an item to the todo list.
@@ -43,7 +43,7 @@ export default function AddItem( { addTaskCB } ) {
 	};
 
 	return (
-		<form onClick={ handleFormSubmission } className={ styles[ 'add-item' ] }>
+		<form onSubmit={ handleFormSubmission } className={ styles[ 'add-item' ] }>
 			{/* Type is implicitly defined to be text. */}
 			<Input
 				className={ styles[ 'add-input' ] }
@@ -58,10 +58,11 @@ export default function AddItem( { addTaskCB } ) {
 			/>
 			<Button
 				className={ styles[ 'add-button' ] }
-				ariaLabel="Add Task"
 				type="submit"
 				disabled={ task.length > 0 ? false : true }
-			></Button>
+			>
+				Add Task
+			</Button>
 		</form>
 	);
 }

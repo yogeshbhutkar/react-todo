@@ -1,13 +1,13 @@
 /**
  * React Component for the main component of the application.
  *
- * @file App.jsx
+ * @file app.jsx
  * @description The main component of the application.
  * @module App
  */
 
 import React from 'react';
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
 
 /**
  * App -- The main component of the application.

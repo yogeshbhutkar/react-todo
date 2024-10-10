@@ -1,15 +1,15 @@
 /**
  * Dialog UI component.
  *
- * @file Dialog.jsx
+ * @file dialog.jsx
  * @description The UI component for Dialog.
  * @module App
  */
 
 import React, { useState } from 'react';
-import styles from './Dialog.module.css';
-import Input from './Input';
-import Button from './Button';
+import Button from './button';
+import styles from './dialog.module.css';
+import Input from './input';
 
 /**
  * Modal -- The UI component for Dialog.

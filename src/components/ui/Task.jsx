@@ -1,15 +1,15 @@
 /**
  * Task component.
  *
- * @file Task.jsx
+ * @file task.jsx
  * @description The UI component for Tasks.
  * @module App
  */
 
 import React, { useState } from 'react';
-import styles from './Task.module.css';
-import Button from './Button';
-import Dialog from './Dialog';
+import styles from './task.module.css';
+import Dialog from './dialog';
+import Button from './button';
 
 /**
  * Task -- The UI component for Tasks.
@@ -56,18 +56,21 @@ export default function Task( { task, taskCallbacks } ) {
 				<Button
 					className={ styles[ 'task-button-complete' ] }
 					onClick={ () => markTaskCompleteCB( task.id ) }
-					ariaLabel="Mark as complete"
-				></Button>
+				>
+					Mark as complete
+				</Button>
 				<Button
 					className={ styles[ 'task-button-edit' ] }
 					onClick={ () => setIsDialogOpen( true ) }
-					ariaLabel="Edit Task"
-				></Button>
+				>
+					Edit Task
+				</Button>
 				<Button
 					className={ styles[ 'task-button-delete' ] }
 					onClick={ () => deleteTaskCB( task.id ) }
-					ariaLabel="Delete Task"
-				></Button>
+				>
+					Delete Task
+				</Button>
 			</div>
 		</div>
 	);
